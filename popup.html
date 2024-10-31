@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Генератор паролей</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Генератор паролей</h1>
+        <input placeholder="Длина пароля" type="number" id="length" value="12" min="8" max="128">
+        
+        <div style="display: flex; justify-content: space-around;">
+            <label for="lowercase">
+                <input type="checkbox" id="lowercase" checked>
+                a-z
+            </label>
+            <label for="uppercase">
+                <input type="checkbox" id="uppercase" checked>
+                A-Z
+            </label>
+            <label for="numbers">
+                <input type="checkbox" id="numbers" checked>
+                0-9
+            </label>
+        </div>
+
+        <button id="generate">Сгенерировать</button>
+        <div id="copy" style="display: none;">
+            <button>Скопировать</button>
+            <button id="save">Сохранить пароль</button>
+        </div>
+        <p id="result" style="display: none;"></p>
+        <div id="strength" style="display: none;">
+            <div id="strength-bar">
+                <div id="strength-fill"></div>
+            </div>
+            <p id="strength-text">Надежность: </p>
+        </div>
+        <p id="message"></p>
+
+        <script src="popup.js"></script>
+    </body>
+    </html>
